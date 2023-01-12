@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    var x=0,y=0;
+    function showdate()
+    {
+        y+=2;
+        document.getElementById('demo').innerHTML = Date() +y;
+    }
+    function showgreet()
+    {
+        /*const arr =["6430202658","Nontawat",3.25,10000];
+        const person = {id:"6430202658",name:"Nontawat",GPA:3.25,money:10000};
+        console.log(person.id);
+        console.log(person.name);
+        person.GPA=5.50;
+        console.log(person.GPA)
+        console.log(person.money);
+        */
+        let name = window.prompt("what's yous name?");
+        let msg='Hello'+name+ 'How are you?';
+        setInterval(()=>{ 
+            if(x<msg.length){
+            document.getElementById('greet').innerHTML +=msg[x];
+            x++;
+            }
+        },100);
+        
+        //window.alert("Hello "+name+"How are you??");
+       /*  for(let i=0;i<arr.length;i++)
+        {
+            window.alert(arr[i]);
+        } */
+    }
+
+</script>
+</head>
+<body>
+
+<h2>My First Heard by JavaScript</h2>
+
+<button type="button"
+onclick="showdate()">Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+<button type="button"
+onclick="showgreet()">Click me for open heard !!</button>
+
+<p id="greet"></p>
+
+</body>
+</html> 
